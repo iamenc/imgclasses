@@ -1,0 +1,57 @@
+body {
+    margin: 0%;
+}
+
+.app-screen{
+    width: 100vw;
+    height: 100vh;
+    background-color: antiquewhite;
+    flex-wrap: wrap;
+    display: -webkit-flex; /* Safari */
+    display: flex;
+}
+
+.show-box{
+    width: 70vw;
+    height: 80vh;
+    background-color: skyblue;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.menu-box{
+    width: 30vw;
+    height: 80vh;
+    background-color: silver;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.choose-box{
+    width: 100vw;
+    height: 20vh;
+    background-color: gray;
+    overflow: hidden;
+    border-radius: 10px;
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-item{
+    width: 200px;
+    height: 18vh;
+    min-width: 100px;
+    max-width: 400px;
+    background-color: teal;
+    border-radius: 10%;
+}
+
+
+.menu-classes-btn{
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: wheat;
+}

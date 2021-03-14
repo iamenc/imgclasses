@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>imgclasses</title>
+<link rel="stylesheet" href="/static/css/imgclasses.css">
+</head>
+<body>
+    <div id="app" class="app-screen">
+        <div class="show-box">
+            <img :src="showImgUrl" alt="">
+        </div>
+        <div class="menu-box">
+            <div class="menu-classes-btn-list" v-for="btn in buttons">
+                <button class="menu-classes-btn">{{ btn }}</button>
+            </div>
+        </div>
+        <div class="choose-box">
+            <div class="img-item" v-for="it in items" style="margin-left: 6px;">
+                <img class="img-item" :src="it.url"/>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/static/js/vue.js"></script>
+<script src="/static/js/imgclasses.js"></script>
+</html>
