@@ -40,14 +40,13 @@ body {
 }
 
 .img-item{
-    width: 200px;
+    width: 180px;
     height: 18vh;
     min-width: 100px;
     max-width: 400px;
     background-color: teal;
     border-radius: 10%;
 }
-
 
 .menu-classes-btn{
     width: 150px;

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>imgclasses</title>
+    <style>
+        .box {
+            width: 100vw;
+            height: 100vh;
+            display: -webkit-flex;
+            display: flex;
+        }
+
+        .showimg {
+            width: 80vw;
+            height: 100vh;
+            background-color: bisque;
+            display: -webkit-flex;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .chooseclasses {
+            position: fixed;
+            left: 80vw;
+            top: 5vh;
+            width: 20vw;
+            height: 60vh;
+            background-color: cadetblue;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .classesbtn {
+            width: 20vw;
+            height: 8vh;
+            background-color: chocolate;
+        }
+
+        .btn-classes{
+            width: 20vw;
+            height: 6vh;
+            margin: 1vh 0vw;
+            background-color: darkgreen;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body style="margin:0%">
+    <div id="app" class="box">
+        
+        <div class="showimg">
+            <img src="{{ .url }}" alt="">
+        </div>
+        <div class="chooseclasses">
+            <form action="/classes">
+                <input type="radio" checked="checked" name="classes" value="未选择"/>
+                未选择
+                <br>
+                {{ range $id, $val := .classes }}
+                <input id="btn--{{ $val }}" type="radio" name="classes" value="{{ $val }}"/>
+                <label for="btn--{{ $val }}" class="btn-classes">
+                        --{{ $val }}---：
+                </label>
+                <br>
+                {{ end }}
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

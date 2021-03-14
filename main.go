@@ -7,8 +7,6 @@ import (
 )
 
 func main() {
-	beego.BConfig.WebConfig.TemplateLeft = ">>>"
-	beego.BConfig.WebConfig.TemplateRight = "<<<"
-
+	beego.SetStaticPath("/imgdata", "DATA/data")
 	beego.Run()
 }
